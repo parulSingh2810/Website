@@ -1,0 +1,230 @@
+:root {
+    --primaryColor: hsl(199, 100%, 22%);
+    --secondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 22%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 136%);
+    --greyColor: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 240);
+    --cardBG: rgb(255, 255, 255);
+}
+
+.home {
+    width: 100%;
+   
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    
+
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .homeContent {
+        width: 80%;
+        height: max-content;
+        padding: 7rem 0 3rem;
+        display: flex;
+        row-gap: 2rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+
+        color: var(--blackColor);
+        z-index: 100;
+
+        .text1-white {
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: fixed;
+            border-radius: 1rem;
+            margin-top: -6rem;
+            text-align: center;
+            margin-bottom: 6rem;
+            
+
+
+            .btn {
+
+                margin: 0.4rem 0.8rem 0.5rem;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.5rem;
+                
+
+
+                .icon {
+                    color: var(--whiteColor);
+                    margin: 5px;
+  
+                   
+                }
+
+            }
+        }
+
+        .cardDiv {
+            width: 100%;
+            position: relative;
+            padding: 2rem 1rem;
+            background: var(--textColor);
+            border-radius: 1rem;
+            gap: 3rem;
+            margin-top: -6rem;
+
+
+            .input {
+                height: 40px;
+                width: 80%;
+                padding: 0 1rem;
+                background: var(--inputColor);
+                border-radius: 3rem;
+
+
+
+
+                .input1 {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    font-size: 13px;
+                    font-weight: 500;
+
+                    &::placeholder {
+                        font-size: 13px;
+                    }
+                }
+
+                .icon {
+                    font-size: 20px;
+                    color: var(--primaryColor) !important;
+                    margin-left: 10px;
+                }
+
+                .input[type=range] {
+                    background: blue;
+                }
+
+            }
+
+            .searchOptions {
+                position: absolute;
+                background: var(--gradientColor);
+                color: white;
+                width: max-content;
+                bottom: -0.7rem;
+                column-gap: .8rem;
+                padding: 5px 1rem;
+                border-radius: 3rem;
+                left: 50%;
+                transform: translate(-50%);
+                justify-content: center;
+                cursor: pointer;
+
+
+                &:hover {
+                    background: var(--primaryColor);
+                }
+
+                .icon {
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:200) {
+    .home {
+        background-size: contain;
+
+        .homeContent {
+            .text1-white {
+                margin-top: rem;
+            }
+
+
+        }
+    }
+}
+
+@media screen and (min-width:520px) {
+    .home {
+        .homeContent {
+            .cardDiv {
+                grid-template-columns: repeat(2, 1fr);
+               
+            }
+        }
+    }
+}
+
+
+@media screen and(min-width:650) {
+
+    .text1-white {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width:780px) {
+    .home {
+        .homeContent {
+            .cardDiv {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3, 1fr);
+
+                .input {
+                    margin-bottom: 0.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1240px) {
+    .home {
+        height: 70vh;
+
+        .homeContent {
+            padding-left: 0;
+            padding-right: 0;
+
+            .cardDiv {
+                padding: 2rem 1rem;
+                grid-template-columns: repeat(3, 1fr);
+
+                .input {
+                    margin-bottom: 1rem;
+                }
+
+                .searchOptions {
+                    bottom: -1rem;
+                    padding: 8px 1rem;
+
+                    span {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

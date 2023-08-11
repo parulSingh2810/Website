@@ -1,0 +1,57 @@
+
+
+  @media screen and (min-width:530px )  {
+    .products {
+      padding: 10px 0px;
+      display: flex;
+
+    .left {
+      flex: 1;
+      position: sticky;
+      height: auto;
+      top: 50px;
+      background-color: whitesmoke;
+  
+      .filterItem{
+        margin-bottom: 70px; 
+        
+      }
+      .right {
+        flex: 4;
+        margin-top: -8px;
+    
+     
+      }
+    }
+  }
+    
+  }
+  @media (max-width: 530px) {
+    .products {
+      padding: 1px 0;
+      flex-direction: column;
+
+    .left {
+
+      grid: 2;
+      text-align: center;
+      height: 100vh;
+      top: 1px;
+      background-color: whitesmoke;
+  
+      .filterItem{
+        margin-bottom: 30px;
+        margin-top: -1rem;
+
+        
+      }
+
+    .right{
+      grid: 3;
+    }   
+    }
+    
+   
+  }
+     }
+  

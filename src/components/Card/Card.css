@@ -1,0 +1,185 @@
+
+.main {
+    width: 100%;
+       background-color: white;
+       margin-top: -4rem;
+       margin-bottom: 2rem;
+
+    .secTitle {
+
+
+        .title {
+            position: relative;
+            width: max-content;
+            color: hsl(0, 0%, 1%);
+            margin: 1rem 0;
+            z-index: 2;
+
+            &::after {
+                position: absolute;
+                content: "";
+                background: var(--secondaryColor);
+                height: 5px;
+                width: 160px;
+                right: 0;
+                bottom: 5px;
+                z-index: -1;
+            }
+        }
+    }
+
+    .secContent {
+        justify-content: center;
+        gap: 1.5rem;
+
+
+        .singleDestination {
+            height: 100%;
+            display: grid;
+            ;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background: var(--cardBG);
+            box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+            overflow: hidden;
+
+            &:hover {
+                background: var(--cardHover);
+                background: var(--cardBG);
+                box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+                transition: .3s ease;
+            }
+
+            .imageDiv {
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+
+                .img1 {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: 2s ease;
+
+                }
+
+                &:hover {
+                    .img1 {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .cardInfo {
+                padding: 1rem;
+
+                .destTitle {
+                    color: var(--blackColor);
+                    font-size: 1.25rem;
+
+                }
+
+                .continent {
+                    gap: .5rem;
+
+                    .icon {
+                        color: hsl(0, 0%, 1%);
+                        font-size: 18px;
+                    }
+
+                    .name {
+                        color: var(--secondaryColor);
+                        font-weight: 400;
+                        font-size: 14px;
+                    }
+                }
+
+                .fees {
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-top: 1.5px solid var(--greyColor);
+                    border-bottom: 1.5px solid var(--greyColor);
+
+
+                    .grade {
+                        color: black;
+                        max-width: 100px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .small1 {
+                            text-align: center;
+                            background: var(--gradientColor);
+                            border-radius: 1rem;
+                            color: var(--whiteColor);
+                            padding: 1px 10px;
+                            font-size: 15px;
+                        }
+
+                    }
+
+                    .price {
+                        font-size: 2rem;
+                        color: var(--blackColor);
+                    }
+                }
+
+                .desc {
+                    font-size: 13.5px;
+                    color: hsl(0, 0%, 1%);
+                    font-weight: 500;
+                }
+
+                .btn1 {
+                    margin-top: 1rem;
+                    font-weight: 600;
+                    color: white;
+                    justify-content: space-between;
+                    gap: .5rem;
+
+                    .icon {
+                        align-self: center;
+                        font-size: 18px;
+
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:500px) {
+    .title {
+        font-size: 1.5rem;
+
+        &::after {
+            width: 155px !important;
+        }
+    }
+
+    .secContent {
+        grid-template-columns: repeat(2, 1fr);
+
+        .singleDestination {
+            height: auto;
+        }
+    }
+
+}
+
+@media screen and (min-width: 840px) {
+    .secContent {
+        grid-template-columns: repeat(3, 1fr);
+
+        .singleDestination {
+            height: auto;
+        }
+    }
+}
